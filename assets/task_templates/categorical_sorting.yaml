@@ -1,0 +1,35 @@
+template_id: categorical_sorting
+template_type: categorical_sorting
+description: "Sort a collection of objects into at least two different containers or places based on category."
+allowed_relations:
+  - in
+  - on
+primary_goal_relation: in
+fail_relations:
+  - in
+slots:
+  - slot_name: initial_container
+    group_hint: container
+    description: "The initial place where all objects start (e.g. a tray, shelf, or table area)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: final_container
+    group_hint: target
+    description: "The destination containers / zones objects must be sorted into (at least two)."
+    min_count: 2
+    max_count: 3
+    tags: []
+  - slot_name: objects_to_sort
+    group_hint: target
+    description: "Objects that must be sorted into the correct final containers."
+    min_count: 3
+    max_count: 4
+    tags:
+      - content
+  - slot_name: decorator
+    group_hint: decor
+    description: "Background objects to enhance realism; should not be sorted."
+    min_count: 1
+    max_count: 3
+    tags: []

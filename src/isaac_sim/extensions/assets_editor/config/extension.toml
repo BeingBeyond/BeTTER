@@ -1,0 +1,15 @@
+[package]
+version = "0.1.0"
+category = "BeTTER"
+title = "BeTTER Assets Editor"
+description = "Thin Isaac Sim extension shell for BeTTER asset editing workflows."
+authors = ["BeTTER Team"]
+keywords = ["isaac-sim", "asset", "editor", "better"]
+writeTarget.kit = true
+
+[dependencies]
+"omni.ui" = {}
+"omni.kit.uiapp" = {}
+
+[[python.module]]
+name = "assets_editor"

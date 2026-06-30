@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "default_embodiment_id": "franka_robotiq",
+  "embodiments": [
+    {
+      "embodiment_id": "franka_robotiq",
+      "display_name": "Franka + Robotiq 2F-85",
+      "robot_class": "FrankaRobotiqRobot",
+      "asset_root": "../../assets/robots/franka_robotiq",
+      "asset_path": "franka_robotiq_2f_85_flattened.usd",
+      "runtime_asset_path": "franka_robotiq_2f_85_flattened.usd",
+      "planner_asset_path": "franka_robotiq_planner.urdf",
+      "runtime_control": {
+        "controller_profile_id": "robolab_franka_robotiq_high_pd",
+        "disable_robot_gravity": true,
+        "gripper_action_profile": {
+          "joint_names": [
+            "finger_joint"
+          ],
+          "opened_positions": [
+            0.0
+          ],
+          "closed_positions": [
+            0.7853981633974483
+          ],
+          "close_threshold": 0.5
+        }
+      },
+      "prim_paths": {
+        "robot_root": "/World/franka/panda",
+        "arm_root": "/World/franka/panda",
+        "eef_frame": "/World/franka/panda/Gripper/Robotiq_2F_85/base_link",
+        "eef_base_frame": "/World/franka/panda/Gripper/Robotiq_2F_85/base_link",
+        "gripper_root": "/World/franka/panda/Gripper/Robotiq_2F_85"
+      },
+      "frame_roles": {
+        "legacy_eef_frame": {
+          "kind": "runtime_prim",
+          "prim_path_key": "eef_frame",
+          "semantic": "robolab_robotiq_tool_base_not_task_tcp"
+        },
+        "tool_base_frame": {
+          "kind": "runtime_prim",
+          "prim_path_key": "eef_base_frame",
+          "planner_link_name": "robotiq_base_link"
+        },
+        "task_tcp_frame": {
+          "kind": "planner_link",
+          "link_name": "robotiq_tcp",
+          "parent_role": "tool_base_frame"
+        },
+        "controller_target_frame": "task_tcp_frame",
+        "cartesian_observation_frame": "task_tcp_frame"
+      },
+      "joint_names": {
+        "arm": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7"
+        ],
+        "gripper": [
+          "finger_joint"
+        ]
+      },
+      "transforms": {},
+      "compat": {
+        "legacy_embodiment_aliases": [
+          "robotiq",
+          "robolab_franka_robotiq"
+        ],
+        "prim_path_aliases": {
+          "ee": "eef_frame",
+          "end_effector": "eef_frame",
+          "eef_base": "eef_base_frame"
+        }
+      }
+    }
+  ]
+}

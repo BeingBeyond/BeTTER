@@ -1,0 +1,53 @@
+container:
+- instance_id: lunchbox_container_82cd
+  role: container
+  description: A blue plastic lunchbox with the lid open.
+  retrieval_query: open lunchbox
+  tags: []
+goal_objects:
+- instance_id: apple_1_8097
+  semantic_name: apple
+  description: A shiny red apple.
+  retrieval_query: red apple
+  tags:
+  - content
+- instance_id: banana_1_770f
+  semantic_name: banana
+  description: A ripe yellow banana.
+  retrieval_query: a single banana
+  tags:
+  - content
+- instance_id: pear_1_5383
+  semantic_name: pear
+  description: A ripe pear.
+  retrieval_query: pear
+  tags:
+  - content
+- instance_id: orange_1_10f8
+  semantic_name: orange
+  description: A small orange.
+  retrieval_query: orange fruit
+  tags:
+  - content
+fail_objects:
+- instance_id: red_block_1_1349
+  semantic_name: red_block
+  description: A red block.
+  retrieval_query: red block
+  tags: []
+- instance_id: juice_box_1_8988
+  semantic_name: juice_box
+  description: A small juice box with a straw.
+  retrieval_query: juice box
+  tags: []
+- instance_id: yogurt_cup_1_c00d
+  semantic_name: yogurt_cup
+  description: A small cup of yogurt.
+  retrieval_query: yogurt cup
+  tags: []
+decor_objects:
+- instance_id: water_bottle_1_acfa
+  semantic_name: water_bottle
+  description: A plastic water bottle.
+  retrieval_query: water bottle
+  tags: []

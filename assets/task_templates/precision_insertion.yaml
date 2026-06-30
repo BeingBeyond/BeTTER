@@ -1,0 +1,42 @@
+template_id: precision_insertion
+template_type: precision_insertion
+description: "Insert objects into a tight or nested position requiring precise placement and fine tolerance (e.g. insert CDs into a CD rack, bottles into a wine rack, books onto a shelf slot)."
+allowed_relations:
+  - in
+  - inside
+  - on
+primary_goal_relation: in
+fail_relations:
+  - in
+slots:
+  - slot_name: final_container
+    group_hint: container
+    description: "The tight-tolerance destination container (e.g. CD rack, wine rack, narrow shelf)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: initial_container
+    group_hint: decor
+    description: "The initial position of the objects before insertion (ensures graspability and realism)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: objects_to_insert
+    group_hint: target
+    description: "Objects that must be inserted into the final container with precision."
+    min_count: 2
+    max_count: 4
+    tags:
+      - content
+  - slot_name: distractor
+    group_hint: distractor
+    description: "Objects with similar appearance or category that should NOT be inserted."
+    min_count: 1
+    max_count: 3
+    tags: []
+  - slot_name: decorator
+    group_hint: decor
+    description: "Common scene objects to enhance realism, clearly not involved in the task."
+    min_count: 1
+    max_count: 3
+    tags: []

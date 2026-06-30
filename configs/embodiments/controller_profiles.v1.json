@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "profiles": [
+    {
+      "profile_id": "robolab_franka_robotiq_high_pd",
+      "source_files": [
+        "RoboLab: robolab/robots/droid.py",
+        "RoboLab: robolab/robots/franka_high_pd.py"
+      ],
+      "description": "RoboLab DROID-style Franka Robotiq profile: high-PD Franka arm plus a single Robotiq finger_joint velocity limit while preserving USD gripper drive gains.",
+      "joint_groups": [
+        {
+          "name": "panda_shoulder",
+          "joint_names": [
+            "panda_joint1",
+            "panda_joint2",
+            "panda_joint3",
+            "panda_joint4"
+          ],
+          "stiffness": 400.0,
+          "damping": 80.0,
+          "velocity_limit": 2.175,
+          "effort_limit": 87.0
+        },
+        {
+          "name": "panda_forearm",
+          "joint_names": [
+            "panda_joint5",
+            "panda_joint6",
+            "panda_joint7"
+          ],
+          "stiffness": 400.0,
+          "damping": 80.0,
+          "velocity_limit": 2.61,
+          "effort_limit": 12.0
+        },
+        {
+          "name": "robotiq_finger_joint",
+          "joint_names": [
+            "finger_joint"
+          ],
+          "stiffness": null,
+          "damping": null,
+          "velocity_limit": 5.0,
+          "effort_limit": null
+        }
+      ]
+    }
+  ]
+}

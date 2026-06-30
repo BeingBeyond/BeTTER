@@ -1,0 +1,15 @@
+[package]
+version = "0.1.0"
+category = "BeTTER"
+title = "BeTTER Task Editor"
+description = "Thin Isaac Sim extension shell for BeTTER task generation and variation editing workflows."
+authors = ["BeTTER Team"]
+keywords = ["isaac-sim", "task", "variation", "editor", "better"]
+writeTarget.kit = true
+
+[dependencies]
+"omni.ui" = {}
+"omni.kit.uiapp" = {}
+
+[[python.module]]
+name = "task_editor"

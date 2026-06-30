@@ -1,0 +1,25 @@
+task_id: Packing_a_Fruit_Lunch
+template_type: loose_packing
+description: Migrated task Packing a Fruit Lunch
+instruction: Pack the fruits into the blue lunchbox.
+defaults:
+  container_instance_id: lunchbox_container_82cd
+  primary_goal_relation: in
+  allowed_goal_relations:
+  - in
+  fail_policy:
+    distractor_relation_to_container_is_fail: true
+    fail_on_relations:
+    - in
+    - 'on'
+variation_registry:
+  train:
+  - TV-01
+  - TV-02
+  - TV-03
+  - TV-04
+  eval:
+  - EV-01
+  - EV-02
+  - EV-03
+  - EV-04

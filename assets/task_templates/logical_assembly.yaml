@@ -1,0 +1,42 @@
+template_id: logical_assembly
+template_type: logical_assembly
+description: "Assemble ingredients or components in a semantically meaningful order onto a holder (e.g. making a sandwich, building a layered dish). Order and selection matter."
+allowed_relations:
+  - on
+  - in
+primary_goal_relation: on
+fail_relations:
+  - in
+  - on
+slots:
+  - slot_name: final_holder
+    group_hint: container
+    description: "The surface or container where the assembled result is placed (e.g. a plate, cutting board)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: initial_container
+    group_hint: decor
+    description: "The initial holder for the ingredients before assembly (e.g. bread holder, tray)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: stackable_ingredient
+    group_hint: target
+    description: "Ingredients to be stacked or assembled in order onto the final holder."
+    min_count: 3
+    max_count: 5
+    tags:
+      - content
+  - slot_name: distractor
+    group_hint: distractor
+    description: "Items that look similar to ingredients but must NOT be included in the assembly."
+    min_count: 1
+    max_count: 3
+    tags: []
+  - slot_name: decorator
+    group_hint: decor
+    description: "Decorative items common in the scene that create no task ambiguity."
+    min_count: 1
+    max_count: 2
+    tags: []

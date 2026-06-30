@@ -1,0 +1,18 @@
+variation_id: TV-01
+extends: BASE
+enabled: true
+policy_overrides:
+  fail:
+    remove:
+    - subject_id: juice_box_1_8988
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: juice_box_1_8988
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: 'on'
+      target_id: lunchbox_container_82cd

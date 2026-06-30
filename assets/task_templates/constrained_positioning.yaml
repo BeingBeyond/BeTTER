@@ -1,0 +1,36 @@
+template_id: constrained_positioning
+template_type: constrained_positioning
+description: "Pick objects from a constrained space and place them into another constrained position (e.g. retrieve items from a drawer, place into a tight shelf slot)."
+allowed_relations:
+  - in
+  - on
+  - inside
+primary_goal_relation: in
+fail_relations:
+  - in
+slots:
+  - slot_name: initial_container
+    group_hint: container
+    description: "The constrained initial position where objects start (e.g. a drawer, box)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: final_container
+    group_hint: target
+    description: "The constrained destination where objects must be placed."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: objects_to_place
+    group_hint: target
+    description: "Objects that must be moved from the initial to the final constrained position."
+    min_count: 2
+    max_count: 3
+    tags:
+      - content
+  - slot_name: decorator
+    group_hint: decor
+    description: "Common scene objects that should not be moved."
+    min_count: 1
+    max_count: 3
+    tags: []

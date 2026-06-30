@@ -1,0 +1,42 @@
+{
+  "task_name": "Packing a Fruit Lunch",
+  "variation_id": "EV-02",
+  "nodes": [
+    {
+      "node_id": "apple",
+      "type": "maintenance",
+      "parents": [],
+      "condition": {
+        "type": "spatial",
+        "subject_id": "apple_1_8097",
+        "relation": "in",
+        "target_id": "lunchbox_container_82cd"
+      },
+      "target_object": "apple_1_8097"
+    },
+    {
+      "node_id": "banana",
+      "type": "maintenance",
+      "parents": [],
+      "condition": {
+        "type": "spatial",
+        "subject_id": "banana_1_770f",
+        "relation": "in",
+        "target_id": "lunchbox_container_82cd"
+      },
+      "target_object": "banana_1_770f"
+    },
+    {
+      "node_id": "orange",
+      "type": "maintenance",
+      "parents": [],
+      "condition": {
+        "type": "spatial",
+        "subject_id": "orange_1_10f8",
+        "relation": "in",
+        "target_id": "lunchbox_container_82cd"
+      },
+      "target_object": "orange_1_10f8"
+    }
+  ]
+}

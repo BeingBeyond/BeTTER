@@ -1,0 +1,79 @@
+variation_id: EV-02
+extends: BASE
+enabled: true
+policy_overrides:
+  fail:
+    remove:
+    - subject_id: juice_box_1_8988
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: juice_box_1_8988
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+pose_overrides:
+  apple_1_8097:
+    selected_asset_id: 08749fe049654b85a5ebf1079ff55a88
+    position:
+    - 0.5274556149981671
+    - 0.24069296762623368
+    - 0.0200000000000001
+    rotation:
+    - 6.104268905835139e-17
+    - -2.5552916565197937e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  banana_1_770f:
+    selected_asset_id: 1787fb8e12f14318899702ae6c502de5
+    position:
+    - 0.416658644536001
+    - -0.19362562287040908
+    - 0.017628273870616655
+    rotation:
+    - 6.122641357745423e-17
+    - -2.536919204609506e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  orange_1_10f8:
+    selected_asset_id: 0eb601aa649c40caa3eff35a383049b9
+    position:
+    - 0.38695980968646937
+    - 0.07144646114520818
+    - 0.0200000000000001
+    rotation:
+    - 6.085303828148036e-17
+    - -2.5742567342068944e-17
+    - -8.040613248383182e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  water_bottle_1_acfa:
+    selected_asset_id: 7cc6c57715a443c68dfe591f98cc4341
+    position:
+    - 0.678253977333775
+    - -0.2918672922707638
+    - 0.02000000000000028
+    rotation:
+    - 6.047373555792825e-17
+    - -2.612187006562104e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002

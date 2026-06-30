@@ -1,0 +1,32 @@
+template_id: tabletop_arrangement
+template_type: tabletop_arrangement
+description: "Arrange objects on a tabletop surface according to a spatial layout."
+allowed_relations:
+  - on
+  - left_of
+  - right_of
+  - next_to
+  - in_front_of
+  - behind
+primary_goal_relation: on
+fail_relations:
+  - in
+slots:
+  - slot_name: surface
+    group_hint: container
+    description: "The tabletop or surface to arrange on."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: target
+    group_hint: target
+    description: "Objects to be placed on the surface in a specific arrangement."
+    min_count: 2
+    max_count: 6
+    tags: []
+  - slot_name: distractor
+    group_hint: distractor
+    description: "Extra objects present on the table but not part of the goal arrangement."
+    min_count: 0
+    max_count: 3
+    tags: []

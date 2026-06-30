@@ -1,0 +1,135 @@
+variation_id: BASE
+enabled: true
+goal_relation: in
+container_instance_id: lunchbox_container_82cd
+set_goal_objects:
+- apple_1_8097
+- banana_1_770f
+- orange_1_10f8
+set_fail_objects:
+- juice_box_1_8988
+- yogurt_cup_1_c00d
+set_decor_objects:
+- water_bottle_1_acfa
+pose_overrides:
+  lunchbox_container_82cd:
+    selected_asset_id: 0b1822d52f274ee0b9ac23107c35024d
+    position:
+    - 0.6041889270519544
+    - 2.7247852914076364e-31
+    - 0.020000000000000004
+    rotation:
+    - 3.695698599956483e-17
+    - -4.9638619623984476e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000007
+    - 1.0000000000000002
+    - 1.0000000000000002
+  apple_1_8097:
+    position:
+    - 0.39267655924472505
+    - 0.11978734118568053
+    - 0.02000000000000002
+    rotation:
+    - 5.819792155623586e-17
+    - -2.839768406731343e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  banana_1_770f:
+    selected_asset_id: 1787fb8e12f14318899702ae6c502de5
+    position:
+    - 0.5568117872880095
+    - -0.2325410872067227
+    - 0.017628273870616492
+    rotation:
+    - 6.120863363433977e-17
+    - -2.538697198920954e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  orange_1_10f8:
+    selected_asset_id: 0eb601aa649c40caa3eff35a383049b9
+    position:
+    - 0.38695980968646937
+    - -0.20433651680281142
+    - 0.020000000000000087
+    rotation:
+    - 6.047373555792827e-17
+    - -2.6121870065621042e-17
+    - -8.040613248383182e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  juice_box_1_8988:
+    selected_asset_id: 097842d4ae11445f872d883cafa46b7a
+    position:
+    - 0.38724428243936
+    - -0.08432025266337921
+    - 0.019999999999999865
+    rotation:
+    - 6.122048731968609e-17
+    - -2.53751183038632e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  yogurt_cup_1_c00d:
+    selected_asset_id: 162ba6e8df2740d4b9c8c44a7ef04fbf
+    position:
+    - 0.6643524608170784
+    - 0.26769439815782914
+    - 0.019999999999999973
+    rotation:
+    - 3.695698599956484e-17
+    - -4.9638619623984476e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  water_bottle_1_acfa:
+    selected_asset_id: 7cc6c57715a443c68dfe591f98cc4341
+    position:
+    - 0.4786333562213726
+    - 0.286988611453208
+    - 0.02
+    rotation:
+    - 5.5163502107439274e-17
+    - -3.143210351611002e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+notes: Derived from legacy TV-01 anchor.
+policy_overrides:
+  fail:
+    remove:
+    - subject_id: juice_box_1_8988
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: juice_box_1_8988
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+instruction: Pack the fruits into the blue lunchbox.

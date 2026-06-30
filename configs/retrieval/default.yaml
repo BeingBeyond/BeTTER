@@ -1,0 +1,35 @@
+# BeTTER Retrieval Server Configuration
+#
+# This file is loaded by services/retrieval_server/server.py at startup.
+# Override path via env var: RETRIEVAL_CONFIG=/path/to/your.yaml
+#
+# The client (src/retrieval/client.py) only needs `server_url`.
+# All paths below are relevant only to the server-side environment.
+
+# URL the RetrieverClient connects to
+server_url: "http://127.0.0.1:8001"
+
+retriever:
+  # DuoduoCLIP source root — injected into sys.path for model import
+  duoduoclip_root: "third_party/DuoduoCLIP"
+
+  # Trained DuoduoCLIP checkpoint
+  model_checkpoint: "third_party/DuoduoCLIP/Four_1to6F_bs1600_LT6.ckpt"
+
+  # Pre-computed shape embeddings directory
+  # Must contain:
+  #   shape_emb_objaverse.h5
+  #   shape_emb_objaverse_model_to_idx.json
+  embeddings_path: "third_party/DuoduoCLIP/dataset/data/objaverse_embeddings/Four_1to6F_bs1600_LT6"
+
+  # Objaverse metadata root directory
+  # Must contain:
+  #   lvis/lvis-annotations.json
+  #   step1x-3d/high_quality_objaverse_1.0.json
+  #   official/objaverse_meta_merged_simple.json
+  #   objaverse++/annotated_800k.json
+  #   pali_merged/pali_merged_annotations.json
+  metadata_root: "third_party/DuoduoCLIP/dataset/objaverse_meta"
+
+  # Default directory for downloaded GLB files (used when request omits download_dir)
+  default_download_dir: "assets/downloads"

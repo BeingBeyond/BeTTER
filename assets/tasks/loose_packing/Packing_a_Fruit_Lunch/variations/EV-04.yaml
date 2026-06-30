@@ -1,0 +1,68 @@
+variation_id: EV-04
+extends: BASE
+enabled: true
+add_goal_objects:
+- pear_1_5383
+remove_goal_objects:
+- apple_1_8097
+policy_overrides:
+  fail:
+    remove:
+    - subject_id: juice_box_1_8988
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: juice_box_1_8988
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+pose_overrides:
+  orange_1_10f8:
+    selected_asset_id: 0eb601aa649c40caa3eff35a383049b9
+    position:
+    - 0.41049371571740745
+    - -0.07244350731043935
+    - 0.020000000000000188
+    rotation:
+    - 6.104268905835137e-17
+    - -2.5552916565197937e-17
+    - -8.040613248383182e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  juice_box_1_8988:
+    selected_asset_id: 097842d4ae11445f872d883cafa46b7a
+    position:
+    - 0.38724428243936004
+    - -0.23648891111422682
+    - 0.01999999999999949
+    rotation:
+    - 6.122641357745423e-17
+    - -2.536919204609506e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  pear_1_5383:
+    selected_asset_id: 152ea047c33c47ec94e15486b30e740b
+    position:
+    - 0.40919817692163873
+    - 0.10906501025988985
+    - 0.025840336038003526
+    rotation:
+    - 0.9999999999999488
+    - -3.2006056818460825e-07
+    - 0.0
+    - 0.0
+    scale:
+    - 1.0
+    - 1.0
+    - 1.0

@@ -1,0 +1,11 @@
+{
+  "op": "and",
+  "conditions": [
+    {
+      "type": "edge",
+      "subject_id": "apple_1_8097",
+      "relation": "in",
+      "target_id": "lunchbox_container_82cd"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Model endpoints for task generation.
+# Each entry: name (display label) and base_url (leave empty for OpenAI default).
+endpoints:
+  - name: "OpenAI (default)"
+    base_url: ""
+  - name: "Local vLLM (8000)"
+    base_url: "http://localhost:8000/v1"
+  - name: "Local vLLM (8001)"
+    base_url: "http://localhost:8001/v1"

@@ -1,0 +1,18 @@
+{
+  "task_name": "Packing a Fruit Lunch",
+  "variation_id": "TV-04",
+  "nodes": [
+    {
+      "node_id": "apple",
+      "type": "maintenance",
+      "parents": [],
+      "condition": {
+        "type": "spatial",
+        "subject_id": "apple_1_8097",
+        "relation": "in",
+        "target_id": "lunchbox_container_82cd"
+      },
+      "target_object": "apple_1_8097"
+    }
+  ]
+}

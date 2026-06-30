@@ -1,0 +1,23 @@
+{
+  "op": "and",
+  "conditions": [
+    {
+      "type": "edge",
+      "subject_id": "banana_1_770f",
+      "relation": "in",
+      "target_id": "lunchbox_container_82cd"
+    },
+    {
+      "type": "edge",
+      "subject_id": "orange_1_10f8",
+      "relation": "in",
+      "target_id": "lunchbox_container_82cd"
+    },
+    {
+      "type": "edge",
+      "subject_id": "pear_1_5383",
+      "relation": "in",
+      "target_id": "lunchbox_container_82cd"
+    }
+  ]
+}

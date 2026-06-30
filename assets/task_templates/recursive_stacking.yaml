@@ -1,0 +1,35 @@
+template_id: recursive_stacking
+template_type: recursive_stacking
+description: "Recursively stack homogeneous objects to achieve physical stability and geometric alignment (e.g. stack books from a shelf onto a table, stack plates from a rack)."
+allowed_relations:
+  - on
+  - in
+primary_goal_relation: on
+fail_relations:
+  - in
+slots:
+  - slot_name: target_surface
+    group_hint: container
+    description: "The base surface or mat where the stack will be built (e.g. table mat, designated spot)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: initial_container
+    group_hint: decor
+    description: "The initial location where objects are stored before stacking (e.g. bookshelf, plate rack)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: objects_to_stack
+    group_hint: target
+    description: "Homogeneous objects that will be stacked in sequence (e.g. books, plates, bowls)."
+    min_count: 3
+    max_count: 4
+    tags:
+      - content
+  - slot_name: decorator
+    group_hint: decor
+    description: "Background objects to enhance scene realism, clearly irrelevant to the stacking task."
+    min_count: 1
+    max_count: 3
+    tags: []

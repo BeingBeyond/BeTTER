@@ -1,0 +1,23 @@
+# Retrieval server dependencies
+# Install in the DuoduoCLIP conda/venv environment, NOT the main simulation env.
+#
+# Usage:
+#   conda activate duoduoclip   # or your DuoduoCLIP env
+#   pip install -r services/retrieval_server/requirements.txt
+
+# Server
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0.0
+
+# Config
+pyyaml>=6.0
+
+# Retrieval core (must be compatible with DuoduoCLIP's torch version)
+# faiss-cpu>=1.7.4        # or faiss-gpu if GPU is available
+h5py>=3.10.0
+numpy>=1.24.0
+torch>=2.0.0            # DuoduoCLIP may require a specific version
+
+# Objaverse download
+objaverse>=0.1.7

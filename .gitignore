@@ -1,0 +1,20 @@
+# Large local asset payloads
+/assets/objects/
+/assets/scenes/
+/outputs/
+
+# Local retrieval assets
+/third_party/DuoduoCLIP/dataset
+/third_party/DuoduoCLIP/dataset/
+/third_party/DuoduoCLIP/Four_1to6F_bs1600_LT6.ckpt
+
+# Internal/debug task workspaces
+/assets/tasks/loose_packing/Debug_Apple_Editing/
+
+# python cache
+__pycache__/
+*.egg-info/
+
+# Local agent/editor state
+/.agents/
+/.codex/

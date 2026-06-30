@@ -1,0 +1,11 @@
+{
+  "op": "or",
+  "conditions": [
+    {
+      "type": "edge",
+      "subject_id": "red_block_1_1349",
+      "relation": "in",
+      "target_id": "lunchbox_container_82cd"
+    }
+  ]
+}

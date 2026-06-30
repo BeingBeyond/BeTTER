@@ -1,0 +1,39 @@
+template_id: patterned_arrangement
+template_type: patterned_arrangement
+description: "Arrange objects into a specific spatial pattern with a practical purpose (e.g. set a breakfast table, lay out tools for a meeting). Placement positions relative to each other matter."
+allowed_relations:
+  - on
+  - left_of
+  - right_of
+  - next_to
+  - in_front_of
+  - behind
+primary_goal_relation: on
+fail_relations:
+  - in
+slots:
+  - slot_name: surface
+    group_hint: container
+    description: "The surface or mat onto which the arrangement is made (e.g. table mat, tray)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: initial_container
+    group_hint: decor
+    description: "Container(s) where objects start before being arranged (ensures graspability and realism)."
+    min_count: 1
+    max_count: 4
+    tags: []
+  - slot_name: objects_to_arrange
+    group_hint: target
+    description: "Objects to be placed on the surface in the target pattern."
+    min_count: 3
+    max_count: 4
+    tags:
+      - content
+  - slot_name: distractor
+    group_hint: distractor
+    description: "Objects sharing category or appearance with target objects but clearly excluded by the task instruction."
+    min_count: 1
+    max_count: 3
+    tags: []

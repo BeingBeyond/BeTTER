@@ -1,0 +1,36 @@
+template_id: loose_packing
+template_type: loose_packing
+description: "Pack a set of target objects into a container. Distractors must not end up inside."
+allowed_relations:
+  - in
+  - on
+primary_goal_relation: in
+fail_relations:
+  - in
+  - on
+slots:
+  - slot_name: container
+    group_hint: container
+    description: "The container to pack into (e.g. lunchbox, bowl, basket)."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: target
+    group_hint: target
+    description: "Objects that should end up inside the container."
+    min_count: 2
+    max_count: 6
+    tags:
+      - content
+  - slot_name: distractor
+    group_hint: distractor
+    description: "Objects that must NOT end up inside the container."
+    min_count: 1
+    max_count: 4
+    tags: []
+  - slot_name: decor
+    group_hint: decor
+    description: "Background scene objects, not relevant to the task goal."
+    min_count: 0
+    max_count: 3
+    tags: []

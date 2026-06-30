@@ -1,0 +1,32 @@
+variation_id: EV-03
+extends: BASE
+enabled: true
+remove_goal_objects:
+- apple_1_8097
+add_fail_objects:
+- red_block_1_1349
+remove_fail_objects:
+- juice_box_1_8988
+- yogurt_cup_1_c00d
+policy_overrides:
+  fail:
+    remove:
+    - subject_id: red_block_1_1349
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+pose_overrides:
+  red_block_1_1349:
+    selected_asset_id: 039fed6030204d31928ba4cecd2c7452
+    position:
+    - 0.4079164967885729
+    - 0.11160261956564109
+    - 0.019999928560803945
+    rotation:
+    - 0.9999999999999488
+    - -3.200605681846082e-07
+    - 0.0
+    - 0.0
+    scale:
+    - 1.0
+    - 1.0000000000000002
+    - 1.0000000000000002

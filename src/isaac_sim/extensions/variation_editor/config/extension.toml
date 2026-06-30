@@ -1,0 +1,15 @@
+[package]
+version = "0.1.0"
+category = "BeTTER"
+title = "BeTTER Variation Editor"
+description = "Isaac Sim extension for editing BeTTER task variation layouts, conditions, and group overrides."
+authors = ["BeTTER Team"]
+keywords = ["isaac-sim", "task", "variation", "layout", "editor", "better"]
+writeTarget.kit = true
+
+[dependencies]
+"omni.ui" = {}
+"omni.kit.uiapp" = {}
+
+[[python.module]]
+name = "variation_editor"

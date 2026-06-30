@@ -1,0 +1,36 @@
+template_id: container_accessing
+template_type: container_accessing
+description: "Load or retrieve objects into/from an articulated container with at least one DoF (e.g. microwave, oven, dishwasher, drawer). The container must be opened, object placed inside, then container closed."
+allowed_relations:
+  - in
+  - inside
+  - on
+primary_goal_relation: in
+fail_relations:
+  - in
+slots:
+  - slot_name: container
+    group_hint: container
+    description: "The articulated container (e.g. microwave, drawer, oven). Must be openable."
+    min_count: 1
+    max_count: 1
+    tags: []
+  - slot_name: object_to_load
+    group_hint: target
+    description: "Object(s) to be loaded into the articulated container."
+    min_count: 1
+    max_count: 3
+    tags:
+      - content
+  - slot_name: decorator_or_distractor
+    group_hint: distractor
+    description: "Scene-realistic objects that should not be confused with the target object to load."
+    min_count: 2
+    max_count: 4
+    tags: []
+  - slot_name: initial_container
+    group_hint: decor
+    description: "Optional: the surface or holder where the object starts before loading (0 = on table directly)."
+    min_count: 0
+    max_count: 1
+    tags: []

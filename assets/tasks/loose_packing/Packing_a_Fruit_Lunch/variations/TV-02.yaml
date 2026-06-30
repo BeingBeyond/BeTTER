@@ -1,0 +1,49 @@
+variation_id: TV-02
+extends: BASE
+enabled: true
+policy_overrides:
+  fail:
+    remove:
+    - subject_id: juice_box_1_8988
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: juice_box_1_8988
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: in
+      target_id: lunchbox_container_82cd
+    - subject_id: yogurt_cup_1_c00d
+      relation: 'on'
+      target_id: lunchbox_container_82cd
+pose_overrides:
+  orange_1_10f8:
+    selected_asset_id: 0eb601aa649c40caa3eff35a383049b9
+    position:
+    - 0.41049371571740745
+    - -0.07244350731043935
+    - 0.020000000000000188
+    rotation:
+    - 6.104268905835137e-17
+    - -2.5552916565197937e-17
+    - -8.040613248383182e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002
+  juice_box_1_8988:
+    selected_asset_id: 097842d4ae11445f872d883cafa46b7a
+    position:
+    - 0.38724428243936004
+    - -0.23648891111422682
+    - 0.01999999999999949
+    rotation:
+    - 6.122641357745423e-17
+    - -2.536919204609506e-17
+    - -8.040613248383183e-17
+    - 1.0
+    scale:
+    - 1.0000000000000004
+    - 1.0000000000000002
+    - 1.0000000000000002

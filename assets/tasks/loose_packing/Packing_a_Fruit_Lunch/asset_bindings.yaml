@@ -1,0 +1,345 @@
+task_id: Packing_a_Fruit_Lunch
+template_type: loose_packing
+generated_from:
+  used_assets_manifest: assets/objects/registry/used_asset_uids_from_demos.json
+  migration_report: assets/objects/registry/migration_report_used_only.json
+bindings:
+  lunchbox_container_82cd:
+    semantic_name: lunchbox_container
+    candidates:
+    - asset_key: 0b1822d52f274ee0b9ac23107c35024d__lunchbox_container__c5b2816f
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/0b1822d52f274ee0b9ac23107c35024d__lunchbox_container__c5b2816f.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/0b1822d52f274ee0b9ac23107c35024d__lunchbox_container__c5b2816f.meta.json
+      source_uid: 0b1822d52f274ee0b9ac23107c35024d
+    - asset_key: 946351441062495a95d0b8df6f681ebb__lunchbox_container__a08b3923
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/946351441062495a95d0b8df6f681ebb__lunchbox_container__a08b3923.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/946351441062495a95d0b8df6f681ebb__lunchbox_container__a08b3923.meta.json
+      source_uid: 946351441062495a95d0b8df6f681ebb
+  apple_1_8097:
+    semantic_name: apple
+    candidates:
+    - asset_key: 08749fe049654b85a5ebf1079ff55a88__apple_1__d30029b4
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/08749fe049654b85a5ebf1079ff55a88__apple_1__d30029b4.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/08749fe049654b85a5ebf1079ff55a88__apple_1__d30029b4.meta.json
+      source_uid: 08749fe049654b85a5ebf1079ff55a88
+    - asset_key: 26599252f85a46749c30b20d2a9213ac__apple_1__633779ed
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/26599252f85a46749c30b20d2a9213ac__apple_1__633779ed.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/26599252f85a46749c30b20d2a9213ac__apple_1__633779ed.meta.json
+      source_uid: 26599252f85a46749c30b20d2a9213ac
+    - asset_key: 2edb597e31b343ea9d59d79e9edbfa3c__apple_1__3f0b4c88
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/2edb597e31b343ea9d59d79e9edbfa3c__apple_1__3f0b4c88.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/2edb597e31b343ea9d59d79e9edbfa3c__apple_1__3f0b4c88.meta.json
+      source_uid: 2edb597e31b343ea9d59d79e9edbfa3c
+    - asset_key: 3ea782225cee46269006d9b85838ef54__apple_1__685d0824
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/3ea782225cee46269006d9b85838ef54__apple_1__685d0824.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/3ea782225cee46269006d9b85838ef54__apple_1__685d0824.meta.json
+      source_uid: 3ea782225cee46269006d9b85838ef54
+    - asset_key: 42737da524e14c07ac7b35f3e64c1d69__apple_1__37049d08
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/42737da524e14c07ac7b35f3e64c1d69__apple_1__37049d08.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/42737da524e14c07ac7b35f3e64c1d69__apple_1__37049d08.meta.json
+      source_uid: 42737da524e14c07ac7b35f3e64c1d69
+    - asset_key: 5b3cfe2d55c743ad8ceeb47ccb1e980a__apple_1__b2c73b84
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/5b3cfe2d55c743ad8ceeb47ccb1e980a__apple_1__b2c73b84.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/5b3cfe2d55c743ad8ceeb47ccb1e980a__apple_1__b2c73b84.meta.json
+      source_uid: 5b3cfe2d55c743ad8ceeb47ccb1e980a
+    - asset_key: 71868774f0be48cf9413a6052ead1956__apple_1__536b7ad4
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/71868774f0be48cf9413a6052ead1956__apple_1__536b7ad4.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/71868774f0be48cf9413a6052ead1956__apple_1__536b7ad4.meta.json
+      source_uid: 71868774f0be48cf9413a6052ead1956
+    - asset_key: 738075ed68a24b66becc914f49e8c4ae__apple_1__48ec4792
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/738075ed68a24b66becc914f49e8c4ae__apple_1__48ec4792.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/738075ed68a24b66becc914f49e8c4ae__apple_1__48ec4792.meta.json
+      source_uid: 738075ed68a24b66becc914f49e8c4ae
+    - asset_key: 73a0b42692ea483a8bd9a18097753bad__apple_1__6703c95b
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/73a0b42692ea483a8bd9a18097753bad__apple_1__6703c95b.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/73a0b42692ea483a8bd9a18097753bad__apple_1__6703c95b.meta.json
+      source_uid: 73a0b42692ea483a8bd9a18097753bad
+    - asset_key: a2056ccc0ed14427a42610e56fb7bd5f__apple_1__42f05998
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/a2056ccc0ed14427a42610e56fb7bd5f__apple_1__42f05998.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/a2056ccc0ed14427a42610e56fb7bd5f__apple_1__42f05998.meta.json
+      source_uid: a2056ccc0ed14427a42610e56fb7bd5f
+    - asset_key: a4ecfbeef9c446c88d69fef8f5c2ff2b__apple_1__aa95b30d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/a4ecfbeef9c446c88d69fef8f5c2ff2b__apple_1__aa95b30d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/a4ecfbeef9c446c88d69fef8f5c2ff2b__apple_1__aa95b30d.meta.json
+      source_uid: a4ecfbeef9c446c88d69fef8f5c2ff2b
+    - asset_key: aeb52d4a345c4d54aade19982cb574e3__apple_1__bcbf7080
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/aeb52d4a345c4d54aade19982cb574e3__apple_1__bcbf7080.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/aeb52d4a345c4d54aade19982cb574e3__apple_1__bcbf7080.meta.json
+      source_uid: aeb52d4a345c4d54aade19982cb574e3
+    - asset_key: b49b1f6b13cd4671ace383cc2a35cd1a__apple_1__2c0df899
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/b49b1f6b13cd4671ace383cc2a35cd1a__apple_1__2c0df899.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/b49b1f6b13cd4671ace383cc2a35cd1a__apple_1__2c0df899.meta.json
+      source_uid: b49b1f6b13cd4671ace383cc2a35cd1a
+    - asset_key: cf67738da7fa4694974bc8f72661ccc6__apple_1__d7c806a5
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/cf67738da7fa4694974bc8f72661ccc6__apple_1__d7c806a5.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/cf67738da7fa4694974bc8f72661ccc6__apple_1__d7c806a5.meta.json
+      source_uid: cf67738da7fa4694974bc8f72661ccc6
+    - asset_key: e3b9b5aae476477c8df44c7e7ca436f6__apple_1__e1c1dfb7
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/e3b9b5aae476477c8df44c7e7ca436f6__apple_1__e1c1dfb7.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/e3b9b5aae476477c8df44c7e7ca436f6__apple_1__e1c1dfb7.meta.json
+      source_uid: e3b9b5aae476477c8df44c7e7ca436f6
+    - asset_key: e42b6a497d484cccaca4d19978b8585e__apple_1__4f70fc2d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/e42b6a497d484cccaca4d19978b8585e__apple_1__4f70fc2d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/e42b6a497d484cccaca4d19978b8585e__apple_1__4f70fc2d.meta.json
+      source_uid: e42b6a497d484cccaca4d19978b8585e
+    - asset_key: fd77489fe5054a0e8a1e5b2453154d2e__apple_1__9d54a478
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/fd77489fe5054a0e8a1e5b2453154d2e__apple_1__9d54a478.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/fd77489fe5054a0e8a1e5b2453154d2e__apple_1__9d54a478.meta.json
+      source_uid: fd77489fe5054a0e8a1e5b2453154d2e
+  banana_1_770f:
+    semantic_name: banana
+    candidates:
+    - asset_key: 1787fb8e12f14318899702ae6c502de5__banana_1__086c8612
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/1787fb8e12f14318899702ae6c502de5__banana_1__086c8612.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/1787fb8e12f14318899702ae6c502de5__banana_1__086c8612.meta.json
+      source_uid: 1787fb8e12f14318899702ae6c502de5
+    - asset_key: 6d99c6c1a8bc4b3e97cebbc49d62115d__banana_1__9cd39871
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/6d99c6c1a8bc4b3e97cebbc49d62115d__banana_1__9cd39871.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/6d99c6c1a8bc4b3e97cebbc49d62115d__banana_1__9cd39871.meta.json
+      source_uid: 6d99c6c1a8bc4b3e97cebbc49d62115d
+    - asset_key: 8d0d2785d79246639532d9a235c2fddc__banana_1__65cb6ee0
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/8d0d2785d79246639532d9a235c2fddc__banana_1__65cb6ee0.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/8d0d2785d79246639532d9a235c2fddc__banana_1__65cb6ee0.meta.json
+      source_uid: 8d0d2785d79246639532d9a235c2fddc
+    - asset_key: 992d6023d51b498cad5c9ee8fd152e61__banana_1__22932644
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/992d6023d51b498cad5c9ee8fd152e61__banana_1__22932644.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/992d6023d51b498cad5c9ee8fd152e61__banana_1__22932644.meta.json
+      source_uid: 992d6023d51b498cad5c9ee8fd152e61
+    - asset_key: 9d9e45a57353493385a609ea7278816a__banana_1__a3c3176d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/9d9e45a57353493385a609ea7278816a__banana_1__a3c3176d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/9d9e45a57353493385a609ea7278816a__banana_1__a3c3176d.meta.json
+      source_uid: 9d9e45a57353493385a609ea7278816a
+    - asset_key: c293dcbfff4740cebe79d939437fd04a__banana_1__983dbfc9
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/c293dcbfff4740cebe79d939437fd04a__banana_1__983dbfc9.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/c293dcbfff4740cebe79d939437fd04a__banana_1__983dbfc9.meta.json
+      source_uid: c293dcbfff4740cebe79d939437fd04a
+    - asset_key: c36d736d644e4a949d1301fafdb65249__banana_1__7e2c3f64
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/c36d736d644e4a949d1301fafdb65249__banana_1__7e2c3f64.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/c36d736d644e4a949d1301fafdb65249__banana_1__7e2c3f64.meta.json
+      source_uid: c36d736d644e4a949d1301fafdb65249
+    - asset_key: f25e5865ff8746879c61c4b8158259f9__banana_1__b5cad165
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/f25e5865ff8746879c61c4b8158259f9__banana_1__b5cad165.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/f25e5865ff8746879c61c4b8158259f9__banana_1__b5cad165.meta.json
+      source_uid: f25e5865ff8746879c61c4b8158259f9
+  juice_box_1_8988:
+    semantic_name: juice_box
+    candidates:
+    - asset_key: 097842d4ae11445f872d883cafa46b7a__juice_box_1__f9b2e6c5
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/097842d4ae11445f872d883cafa46b7a__juice_box_1__f9b2e6c5.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/097842d4ae11445f872d883cafa46b7a__juice_box_1__f9b2e6c5.meta.json
+      source_uid: 097842d4ae11445f872d883cafa46b7a
+    - asset_key: 19f848c62bef44c0a3cbe72fbcd44ec6__juice_box_1__4f65b6ec
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/19f848c62bef44c0a3cbe72fbcd44ec6__juice_box_1__4f65b6ec.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/19f848c62bef44c0a3cbe72fbcd44ec6__juice_box_1__4f65b6ec.meta.json
+      source_uid: 19f848c62bef44c0a3cbe72fbcd44ec6
+    - asset_key: 596c1e4851a240dba38b6291aa978e70__juice_box_1__d4ae4513
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/596c1e4851a240dba38b6291aa978e70__juice_box_1__d4ae4513.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/596c1e4851a240dba38b6291aa978e70__juice_box_1__d4ae4513.meta.json
+      source_uid: 596c1e4851a240dba38b6291aa978e70
+    - asset_key: 61219208844744ada5df6dadcb876a3d__juice_box_1__64830518
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/61219208844744ada5df6dadcb876a3d__juice_box_1__64830518.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/61219208844744ada5df6dadcb876a3d__juice_box_1__64830518.meta.json
+      source_uid: 61219208844744ada5df6dadcb876a3d
+    - asset_key: 6807c0329d084a58aef96158139902db__juice_box_1__8112c32b
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/6807c0329d084a58aef96158139902db__juice_box_1__8112c32b.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/6807c0329d084a58aef96158139902db__juice_box_1__8112c32b.meta.json
+      source_uid: 6807c0329d084a58aef96158139902db
+    - asset_key: a99c43356f8f4a6785338e70bbb7b8ee__juice_box_1__64bb3bc2
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/a99c43356f8f4a6785338e70bbb7b8ee__juice_box_1__64bb3bc2.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/a99c43356f8f4a6785338e70bbb7b8ee__juice_box_1__64bb3bc2.meta.json
+      source_uid: a99c43356f8f4a6785338e70bbb7b8ee
+    - asset_key: e4064538fe5c418c80191e50634062cf__juice_box_1__ce3c4cb7
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/e4064538fe5c418c80191e50634062cf__juice_box_1__ce3c4cb7.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/e4064538fe5c418c80191e50634062cf__juice_box_1__ce3c4cb7.meta.json
+      source_uid: e4064538fe5c418c80191e50634062cf
+    - asset_key: eb73d55b89044f6daa36932ebf30181a__juice_box_1__74ba4d4d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/eb73d55b89044f6daa36932ebf30181a__juice_box_1__74ba4d4d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/eb73d55b89044f6daa36932ebf30181a__juice_box_1__74ba4d4d.meta.json
+      source_uid: eb73d55b89044f6daa36932ebf30181a
+    - asset_key: f5b6d7e24df74963ac0af09c1f435143__juice_box_1__e2089228
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/f5b6d7e24df74963ac0af09c1f435143__juice_box_1__e2089228.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/f5b6d7e24df74963ac0af09c1f435143__juice_box_1__e2089228.meta.json
+      source_uid: f5b6d7e24df74963ac0af09c1f435143
+  orange_1_10f8:
+    semantic_name: orange
+    candidates:
+    - asset_key: 0eb601aa649c40caa3eff35a383049b9__orange_1__f863a547
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/0eb601aa649c40caa3eff35a383049b9__orange_1__f863a547.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/0eb601aa649c40caa3eff35a383049b9__orange_1__f863a547.meta.json
+      source_uid: 0eb601aa649c40caa3eff35a383049b9
+    - asset_key: 2585fd2f595044afb522104c77a20612__orange_1__4ca9b7ba
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/2585fd2f595044afb522104c77a20612__orange_1__4ca9b7ba.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/2585fd2f595044afb522104c77a20612__orange_1__4ca9b7ba.meta.json
+      source_uid: 2585fd2f595044afb522104c77a20612
+    - asset_key: 61b3b54ef16742bd9854e3e7f33f3996__orange_1__82a4a330
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/61b3b54ef16742bd9854e3e7f33f3996__orange_1__82a4a330.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/61b3b54ef16742bd9854e3e7f33f3996__orange_1__82a4a330.meta.json
+      source_uid: 61b3b54ef16742bd9854e3e7f33f3996
+    - asset_key: 713bc77008434576a65e31c18c131cf1__orange_1__650be130
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/713bc77008434576a65e31c18c131cf1__orange_1__650be130.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/713bc77008434576a65e31c18c131cf1__orange_1__650be130.meta.json
+      source_uid: 713bc77008434576a65e31c18c131cf1
+    - asset_key: 86c9057e2b78440ab78b66ec4cb5d41f__orange_1__bb63b6dc
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/86c9057e2b78440ab78b66ec4cb5d41f__orange_1__bb63b6dc.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/86c9057e2b78440ab78b66ec4cb5d41f__orange_1__bb63b6dc.meta.json
+      source_uid: 86c9057e2b78440ab78b66ec4cb5d41f
+    - asset_key: 90411993876047408915de93e8bb65b6__orange_1__3f915f4b
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/90411993876047408915de93e8bb65b6__orange_1__3f915f4b.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/90411993876047408915de93e8bb65b6__orange_1__3f915f4b.meta.json
+      source_uid: 90411993876047408915de93e8bb65b6
+    - asset_key: a03df271d4ed445ca5e80e24ba72f6e7__orange_1__cb7e21dd
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/a03df271d4ed445ca5e80e24ba72f6e7__orange_1__cb7e21dd.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/a03df271d4ed445ca5e80e24ba72f6e7__orange_1__cb7e21dd.meta.json
+      source_uid: a03df271d4ed445ca5e80e24ba72f6e7
+    - asset_key: a67015b5b2bb48cfa15eed7b20e7f195__orange_1__bd6da959
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/a67015b5b2bb48cfa15eed7b20e7f195__orange_1__bd6da959.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/a67015b5b2bb48cfa15eed7b20e7f195__orange_1__bd6da959.meta.json
+      source_uid: a67015b5b2bb48cfa15eed7b20e7f195
+  pear_1_5383:
+    semantic_name: pear
+    candidates:
+    - asset_key: 152ea047c33c47ec94e15486b30e740b__pear_1__39764490
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/152ea047c33c47ec94e15486b30e740b__pear_1__39764490.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/152ea047c33c47ec94e15486b30e740b__pear_1__39764490.meta.json
+      source_uid: 152ea047c33c47ec94e15486b30e740b
+    - asset_key: 618ad10c9f414e9d805e36fd514011e1__pear_1__6322f295
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/618ad10c9f414e9d805e36fd514011e1__pear_1__6322f295.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/618ad10c9f414e9d805e36fd514011e1__pear_1__6322f295.meta.json
+      source_uid: 618ad10c9f414e9d805e36fd514011e1
+    - asset_key: 7131527acb30419fba801ae4a552f21b__pear_1__bc1f9525
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/7131527acb30419fba801ae4a552f21b__pear_1__bc1f9525.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/7131527acb30419fba801ae4a552f21b__pear_1__bc1f9525.meta.json
+      source_uid: 7131527acb30419fba801ae4a552f21b
+    - asset_key: 840f43edf14142f2939180b7d4982a33__pear_1__40a5c428
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/840f43edf14142f2939180b7d4982a33__pear_1__40a5c428.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/840f43edf14142f2939180b7d4982a33__pear_1__40a5c428.meta.json
+      source_uid: 840f43edf14142f2939180b7d4982a33
+    - asset_key: 889f4a84f24144c0b1808d4b59c04d82__pear_1__f4786897
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/889f4a84f24144c0b1808d4b59c04d82__pear_1__f4786897.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/889f4a84f24144c0b1808d4b59c04d82__pear_1__f4786897.meta.json
+      source_uid: 889f4a84f24144c0b1808d4b59c04d82
+    - asset_key: 9b3c7f2bb57a48f1a00c6b603847f4b8__pear_1__45a89b1e
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/9b3c7f2bb57a48f1a00c6b603847f4b8__pear_1__45a89b1e.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/9b3c7f2bb57a48f1a00c6b603847f4b8__pear_1__45a89b1e.meta.json
+      source_uid: 9b3c7f2bb57a48f1a00c6b603847f4b8
+    - asset_key: aae6c9b7e03a4e7982464a31c6e0811f__pear_1__c7122bc4
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/aae6c9b7e03a4e7982464a31c6e0811f__pear_1__c7122bc4.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/aae6c9b7e03a4e7982464a31c6e0811f__pear_1__c7122bc4.meta.json
+      source_uid: aae6c9b7e03a4e7982464a31c6e0811f
+    - asset_key: bf6e7c0c748b47259677b7d4a33a0a5f__pear_1__c9090ca7
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/bf6e7c0c748b47259677b7d4a33a0a5f__pear_1__c9090ca7.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/bf6e7c0c748b47259677b7d4a33a0a5f__pear_1__c9090ca7.meta.json
+      source_uid: bf6e7c0c748b47259677b7d4a33a0a5f
+    - asset_key: d5a7a206f253428da32dd184bd5eb26e__pear_1__a94f8531
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/d5a7a206f253428da32dd184bd5eb26e__pear_1__a94f8531.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/d5a7a206f253428da32dd184bd5eb26e__pear_1__a94f8531.meta.json
+      source_uid: d5a7a206f253428da32dd184bd5eb26e
+    - asset_key: f3dd3064db4f4e8880344425970cecad__pear_1__3b7cdd57
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/f3dd3064db4f4e8880344425970cecad__pear_1__3b7cdd57.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/f3dd3064db4f4e8880344425970cecad__pear_1__3b7cdd57.meta.json
+      source_uid: f3dd3064db4f4e8880344425970cecad
+    - asset_key: f56152e7c8654e52b55e032907c50684__pear_1__fbebb9e9
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/f56152e7c8654e52b55e032907c50684__pear_1__fbebb9e9.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/f56152e7c8654e52b55e032907c50684__pear_1__fbebb9e9.meta.json
+      source_uid: f56152e7c8654e52b55e032907c50684
+    - asset_key: f9fe6b0c9e8d4fbdb281dd991f05fa34__pear_1__ca31227c
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/f9fe6b0c9e8d4fbdb281dd991f05fa34__pear_1__ca31227c.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/f9fe6b0c9e8d4fbdb281dd991f05fa34__pear_1__ca31227c.meta.json
+      source_uid: f9fe6b0c9e8d4fbdb281dd991f05fa34
+    - asset_key: fa74a39529f5462e978b4f5dbc0b8add__pear_1__dd6aa608
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/fa74a39529f5462e978b4f5dbc0b8add__pear_1__dd6aa608.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/fa74a39529f5462e978b4f5dbc0b8add__pear_1__dd6aa608.meta.json
+      source_uid: fa74a39529f5462e978b4f5dbc0b8add
+  red_block_1_1349:
+    semantic_name: red_block
+    candidates:
+    - asset_key: 039fed6030204d31928ba4cecd2c7452__red_block_1__80346159
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/039fed6030204d31928ba4cecd2c7452__red_block_1__80346159.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/039fed6030204d31928ba4cecd2c7452__red_block_1__80346159.meta.json
+      source_uid: 039fed6030204d31928ba4cecd2c7452
+    - asset_key: 7706ed7ec82a4a85be06dac1c940c1db__red_block_1__cc129e4d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/7706ed7ec82a4a85be06dac1c940c1db__red_block_1__cc129e4d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/7706ed7ec82a4a85be06dac1c940c1db__red_block_1__cc129e4d.meta.json
+      source_uid: 7706ed7ec82a4a85be06dac1c940c1db
+    - asset_key: 7c86025cfd5a461ab80f3c8c7d08aad3__red_block_1__8d3ab628
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/7c86025cfd5a461ab80f3c8c7d08aad3__red_block_1__8d3ab628.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/7c86025cfd5a461ab80f3c8c7d08aad3__red_block_1__8d3ab628.meta.json
+      source_uid: 7c86025cfd5a461ab80f3c8c7d08aad3
+    - asset_key: ad83efb63eca47e2be61f36100eed5de__red_block_1__4c940e10
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/ad83efb63eca47e2be61f36100eed5de__red_block_1__4c940e10.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/ad83efb63eca47e2be61f36100eed5de__red_block_1__4c940e10.meta.json
+      source_uid: ad83efb63eca47e2be61f36100eed5de
+    - asset_key: c005684ad59946d98290496b97cb12b1__red_block_1__0b19cb53
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/c005684ad59946d98290496b97cb12b1__red_block_1__0b19cb53.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/c005684ad59946d98290496b97cb12b1__red_block_1__0b19cb53.meta.json
+      source_uid: c005684ad59946d98290496b97cb12b1
+    - asset_key: e952e5a361414ef4a1d84acdf3063d24__red_block_1__c4da6aaf
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/e952e5a361414ef4a1d84acdf3063d24__red_block_1__c4da6aaf.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/e952e5a361414ef4a1d84acdf3063d24__red_block_1__c4da6aaf.meta.json
+      source_uid: e952e5a361414ef4a1d84acdf3063d24
+    - asset_key: ef2dfb2a712a428a8c39df68d4aa969c__red_block_1__8e70253d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/ef2dfb2a712a428a8c39df68d4aa969c__red_block_1__8e70253d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/ef2dfb2a712a428a8c39df68d4aa969c__red_block_1__8e70253d.meta.json
+      source_uid: ef2dfb2a712a428a8c39df68d4aa969c
+    - asset_key: f7ae56b8715d4a68bccb8276101ee84a__red_block_1__d2b78d6f
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/f7ae56b8715d4a68bccb8276101ee84a__red_block_1__d2b78d6f.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/f7ae56b8715d4a68bccb8276101ee84a__red_block_1__d2b78d6f.meta.json
+      source_uid: f7ae56b8715d4a68bccb8276101ee84a
+  water_bottle_1_acfa:
+    semantic_name: water_bottle
+    candidates:
+    - asset_key: 7cc6c57715a443c68dfe591f98cc4341__water_bottle_1__cce23916
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/7cc6c57715a443c68dfe591f98cc4341__water_bottle_1__cce23916.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/7cc6c57715a443c68dfe591f98cc4341__water_bottle_1__cce23916.meta.json
+      source_uid: 7cc6c57715a443c68dfe591f98cc4341
+    - asset_key: 896e7ff5903b465bb34e7ed4b918b3b1__water_bottle_1__58629d3e
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/896e7ff5903b465bb34e7ed4b918b3b1__water_bottle_1__58629d3e.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/896e7ff5903b465bb34e7ed4b918b3b1__water_bottle_1__58629d3e.meta.json
+      source_uid: 896e7ff5903b465bb34e7ed4b918b3b1
+    - asset_key: 8a0d250378ba4033b70c820a061f5ee0__water_bottle_1__9e2f6d61
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/8a0d250378ba4033b70c820a061f5ee0__water_bottle_1__9e2f6d61.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/8a0d250378ba4033b70c820a061f5ee0__water_bottle_1__9e2f6d61.meta.json
+      source_uid: 8a0d250378ba4033b70c820a061f5ee0
+    - asset_key: 98e3113adb614bc68c8a493837a03327__water_bottle_1__7eba76b9
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/98e3113adb614bc68c8a493837a03327__water_bottle_1__7eba76b9.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/98e3113adb614bc68c8a493837a03327__water_bottle_1__7eba76b9.meta.json
+      source_uid: 98e3113adb614bc68c8a493837a03327
+    - asset_key: a5b937e11f4942c48fa31a3ca19c2f0e__water_bottle_1__cdc24ee8
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/a5b937e11f4942c48fa31a3ca19c2f0e__water_bottle_1__cdc24ee8.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/a5b937e11f4942c48fa31a3ca19c2f0e__water_bottle_1__cdc24ee8.meta.json
+      source_uid: a5b937e11f4942c48fa31a3ca19c2f0e
+    - asset_key: ed6d6ecc75ff45ce96801c5df2cfa1c7__water_bottle_1__2a029e46
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/ed6d6ecc75ff45ce96801c5df2cfa1c7__water_bottle_1__2a029e46.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/ed6d6ecc75ff45ce96801c5df2cfa1c7__water_bottle_1__2a029e46.meta.json
+      source_uid: ed6d6ecc75ff45ce96801c5df2cfa1c7
+  yogurt_cup_1_c00d:
+    semantic_name: yogurt_cup
+    candidates:
+    - asset_key: 162ba6e8df2740d4b9c8c44a7ef04fbf__yogurt_cup_1__39fc6f15
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/162ba6e8df2740d4b9c8c44a7ef04fbf__yogurt_cup_1__39fc6f15.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/162ba6e8df2740d4b9c8c44a7ef04fbf__yogurt_cup_1__39fc6f15.meta.json
+      source_uid: 162ba6e8df2740d4b9c8c44a7ef04fbf
+    - asset_key: 1ccdb07e93764238a59e7cfe3247261e__yogurt_cup_1__9a4bfdd7
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/1ccdb07e93764238a59e7cfe3247261e__yogurt_cup_1__9a4bfdd7.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/1ccdb07e93764238a59e7cfe3247261e__yogurt_cup_1__9a4bfdd7.meta.json
+      source_uid: 1ccdb07e93764238a59e7cfe3247261e
+    - asset_key: 4579b3b552874f4899d47441aa30ce7d__yogurt_cup_1__6e7691f6
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/4579b3b552874f4899d47441aa30ce7d__yogurt_cup_1__6e7691f6.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/4579b3b552874f4899d47441aa30ce7d__yogurt_cup_1__6e7691f6.meta.json
+      source_uid: 4579b3b552874f4899d47441aa30ce7d
+    - asset_key: 60b5fae8d55e48f5bc3a554652d5d9ad__yogurt_cup_1__c323ee4d
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/60b5fae8d55e48f5bc3a554652d5d9ad__yogurt_cup_1__c323ee4d.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/60b5fae8d55e48f5bc3a554652d5d9ad__yogurt_cup_1__c323ee4d.meta.json
+      source_uid: 60b5fae8d55e48f5bc3a554652d5d9ad
+    - asset_key: 8a004715e5d54f19a29852b645dc2038__yogurt_cup_1__b271c09e
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/8a004715e5d54f19a29852b645dc2038__yogurt_cup_1__b271c09e.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/8a004715e5d54f19a29852b645dc2038__yogurt_cup_1__b271c09e.meta.json
+      source_uid: 8a004715e5d54f19a29852b645dc2038
+    - asset_key: 8b226fc7035649fdab765d427408b162__yogurt_cup_1__3ad76a74
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/8b226fc7035649fdab765d427408b162__yogurt_cup_1__3ad76a74.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/8b226fc7035649fdab765d427408b162__yogurt_cup_1__3ad76a74.meta.json
+      source_uid: 8b226fc7035649fdab765d427408b162
+    - asset_key: ea52f1800e814b7eb9df555d8cf46725__yogurt_cup_1__08765cd1
+      registry_usd: loose_packing/Packing_a_Fruit_Lunch/ea52f1800e814b7eb9df555d8cf46725__yogurt_cup_1__08765cd1.usd
+      registry_meta: loose_packing/Packing_a_Fruit_Lunch/ea52f1800e814b7eb9df555d8cf46725__yogurt_cup_1__08765cd1.meta.json
+      source_uid: ea52f1800e814b7eb9df555d8cf46725
