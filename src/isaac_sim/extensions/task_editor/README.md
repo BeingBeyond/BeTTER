@@ -148,7 +148,7 @@ Buttons:
 - `Generate` creates a task draft and switches the editor to the generated task
 - `Cancel` exits generation mode without creating a task
 
-Generation happens in the same Python environment that launched Isaac Sim and loaded `task_editor`. This is the same pattern used in LoHoBench task generation: there is no separate generation-only environment for the plugin. If `OPENAI_API_KEY` or the selected endpoint configuration is missing, generation fails inside this same session.
+Generation happens in the same Python environment that launched Isaac Sim and loaded `task_editor`; there is no separate generation-only environment for the plugin. If `OPENAI_API_KEY` or the selected endpoint configuration is missing, generation fails inside this same session.
 
 The draft generator expects `mass_range` in kilograms (`kg`) and `target_size_range` in meters (`m`), with realistic values for the described objects.
 

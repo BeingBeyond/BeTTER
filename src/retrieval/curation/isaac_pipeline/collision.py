@@ -122,6 +122,7 @@ def apply_collision(stage, mesh_prim, final_min_dim: float, use_coacd: bool, coa
     analyzer = MeshAnalyzer()
     analysis = analyzer.analyze_mesh(mesh_prim)
 
-    # 暂时禁用全部高级碰撞生成，直接走最保守的 fallback
+    # Use the conservative native fallback until advanced collision generation
+    # is enabled for this pipeline.
     apply_native_collision_fallback(stage, mesh_prim.GetPrim(), final_min_dim)
     return "native_fallback", analysis

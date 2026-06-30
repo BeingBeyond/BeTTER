@@ -1,15 +1,10 @@
 """
-四元数工具函数。
+Quaternion utility functions.
 
-统一了 LoHoBench 中分散在以下位置的重复实现：
-- src/lohobench/mimicgen/mimicgen_utils.py (wxyz_to_xyzw, xyzw_to_wxyz)
-- src/lohobench/env/utils/quaternion_utils.py (同上)
-- src/lohobench/utils/transform_utils.py (quaternion_multiply, quaternion_rotate_vector)
-
-约定：
-- Isaac Sim / USD 使用 [w, x, y, z] 格式
-- SciPy 使用 [x, y, z, w] 格式
-- 本模块函数名中 wxyz = Isaac Sim 格式，xyzw = SciPy 格式
+Conventions:
+- Isaac Sim and USD use the ``[w, x, y, z]`` convention.
+- SciPy uses the ``[x, y, z, w]`` convention.
+- Function names use ``wxyz`` and ``xyzw`` to make the expected layout explicit.
 """
 
 import numpy as np
@@ -21,7 +16,7 @@ ArrayLike = Union[np.ndarray, list, tuple]
 
 def wxyz_to_xyzw(quat: ArrayLike) -> np.ndarray:
     """
-    Isaac Sim 格式 [w, x, y, z] → SciPy 格式 [x, y, z, w]
+    Convert an Isaac Sim ``[w, x, y, z]`` quaternion to SciPy ``[x, y, z, w]``.
 
     Example:
         >>> wxyz_to_xyzw([1, 0, 0, 0])
@@ -33,7 +28,7 @@ def wxyz_to_xyzw(quat: ArrayLike) -> np.ndarray:
 
 def xyzw_to_wxyz(quat: ArrayLike) -> np.ndarray:
     """
-    SciPy 格式 [x, y, z, w] → Isaac Sim 格式 [w, x, y, z]
+    Convert a SciPy ``[x, y, z, w]`` quaternion to Isaac Sim ``[w, x, y, z]``.
 
     Example:
         >>> xyzw_to_wxyz([0, 0, 0, 1])
@@ -44,7 +39,7 @@ def xyzw_to_wxyz(quat: ArrayLike) -> np.ndarray:
 
 
 def normalize_quat(quat: ArrayLike) -> np.ndarray:
-    """归一化四元数（任意格式）。"""
+    """Normalize a quaternion in any component order."""
     q = np.asarray(quat, dtype=float)
     norm = np.linalg.norm(q)
     if norm < 1e-10:
@@ -54,38 +49,37 @@ def normalize_quat(quat: ArrayLike) -> np.ndarray:
 
 def quat_multiply_wxyz(q1: ArrayLike, q2: ArrayLike) -> np.ndarray:
     """
-    四元数乘法 q1 * q2，输入输出均为 [w, x, y, z] 格式。
+    Multiply two quaternions in ``[w, x, y, z]`` format.
 
-    注意：推荐使用 scipy.spatial.transform.Rotation 代替此函数，
-    此实现仅为兼容 LoHoBench 旧代码。
+    Prefer ``scipy.spatial.transform.Rotation`` for new code; this helper is
+    kept for compatibility with older internal call sites.
     """
     q1 = np.asarray(q1, dtype=float)
     q2 = np.asarray(q2, dtype=float)
-    # 转为 xyzw，用 scipy 计算，再转回
+    # Convert to xyzw, use SciPy for composition, then convert back.
     r1 = R.from_quat(wxyz_to_xyzw(q1))
     r2 = R.from_quat(wxyz_to_xyzw(q2))
     return xyzw_to_wxyz((r1 * r2).as_quat())
 
 
 def rotate_vector_by_quat_wxyz(quat_wxyz: ArrayLike, vec: ArrayLike) -> np.ndarray:
-    """
-    用四元数旋转向量：v' = q * v * q^{-1}
-    输入四元数为 [w, x, y, z] 格式。
-    """
+    """Rotate a vector with a ``[w, x, y, z]`` quaternion."""
     r = R.from_quat(wxyz_to_xyzw(quat_wxyz))
     return r.apply(np.asarray(vec, dtype=float))
 
 
 def adjust_orientation_wxyz(quat_wxyz: ArrayLike) -> np.ndarray:
     """
-    调整朝向，使 X 轴正方向朝前（若 X 分量为负则绕 Z 轴旋转 180°）。
-    对应 LoHoBench transform_utils.py 中的 adjust_orientation。
+    Adjust an orientation so the local positive X axis points forward.
+
+    If the transformed X-axis has a negative world X component, rotate the
+    orientation by 180 degrees around the world Z axis.
 
     Args:
-        quat_wxyz: 四元数 [w, x, y, z]
+        quat_wxyz: Quaternion in ``[w, x, y, z]`` order.
 
     Returns:
-        调整后的四元数 [w, x, y, z]
+        Adjusted quaternion in ``[w, x, y, z]`` order.
     """
     rot = R.from_quat(wxyz_to_xyzw(quat_wxyz))
     if rot.apply(np.array([1.0, 0.0, 0.0]))[0] < 0:
@@ -95,15 +89,14 @@ def adjust_orientation_wxyz(quat_wxyz: ArrayLike) -> np.ndarray:
 
 def rotate_orientation_by_z_wxyz(quat_wxyz: ArrayLike, angle_deg: float) -> np.ndarray:
     """
-    绕 Z 轴旋转四元数指定角度。
-    对应 LoHoBench transform_utils.py 中的 rot_orientation_by_z_axis。
+    Rotate a quaternion by a given angle around the world Z axis.
 
     Args:
-        quat_wxyz: 四元数 [w, x, y, z]
-        angle_deg: 旋转角度（度）
+        quat_wxyz: Quaternion in ``[w, x, y, z]`` order.
+        angle_deg: Rotation angle in degrees.
 
     Returns:
-        旋转后的四元数 [w, x, y, z]
+        Rotated quaternion in ``[w, x, y, z]`` order.
     """
     rot = R.from_quat(wxyz_to_xyzw(quat_wxyz))
     rot = R.from_euler("z", angle_deg, degrees=True) * rot

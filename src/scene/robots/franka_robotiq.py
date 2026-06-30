@@ -269,7 +269,7 @@ class FrankaRobotiqRobot(RobotBase):
         values = np.asarray(positions, dtype=np.float32).reshape(-1)
         if len(values) != len(gripper_joint_names):
             if len(gripper_joint_names) == 1 and len(values) > 1:
-                # Legacy LoHoBench Robotiq states stored both active knuckle targets.
+                # Older Robotiq state logs stored both active knuckle targets.
                 # The canonical PhysX-mimic model exposes only finger_joint as active.
                 values = values[:1]
             else:
@@ -318,12 +318,12 @@ class FrankaRobotiqRobot(RobotBase):
         *,
         zero_velocities: bool = True,
     ) -> Dict[str, Any]:
-        """Restore a LoHoBench/MimicGen action target onto this articulation.
+        """Restore a legacy MimicGen action target onto this articulation.
 
         MimicGen steps store measured robot state in ``step["robot"]`` and a
         command target in ``step["action"]["execution"]``. The latter contains
         seven Franka arm joint targets plus a binary Robotiq ``gripper_action``
-        using LoHoBench's convention: values greater than the configured
+        using the legacy convention: values greater than the configured
         threshold close the gripper; smaller values open it.
         """
         execution = action.get("execution", action)
@@ -371,15 +371,15 @@ class FrankaRobotiqRobot(RobotBase):
         *,
         zero_velocities: bool = True,
     ) -> Dict[str, Any]:
-        """Restore LoHoBench/MimicGen robot state onto the current articulation.
+        """Restore legacy MimicGen robot state onto the current articulation.
 
-        LoHoBench Robotiq recordings store a full 13-DoF joint vector in
-        ``robot_state["joint_positions"]``. The first seven entries are Franka arm
-        joints and the remaining entries are the runtime Robotiq gripper DoFs in
-        the articulation's DoF order. Older or partial records may only contain
-        seven arm joints plus a legacy ``gripper_state``; that path is treated as
-        a compatibility fallback and may collapse two old gripper state values to
-        the single active ``finger_joint`` command value.
+        Older Robotiq recordings store a full 13-DoF joint vector in
+        ``robot_state["joint_positions"]``. The first seven entries are Franka
+        arm joints and the remaining entries are the runtime Robotiq gripper
+        DoFs in the articulation's DoF order. Older or partial records may only
+        contain seven arm joints plus a legacy ``gripper_state``; that path is
+        treated as a compatibility fallback and may collapse two old gripper
+        state values to the single active ``finger_joint`` command value.
         """
         if "joint_positions" not in robot_state:
             raise KeyError("Legacy robot state is missing 'joint_positions'.")

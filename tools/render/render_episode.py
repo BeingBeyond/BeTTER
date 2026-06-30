@@ -205,7 +205,7 @@ def _parse_args() -> argparse.Namespace:
         nargs="+",
         default=["front_camera"],
         help=(
-            "Camera presets to render. Use 'all' for the fixed LoHoBench-style "
+            "Camera presets to render. Use 'all' for the fixed benchmark "
             "front/left/right cameras, or 'custom' to use --camera-* arguments."
         ),
     )

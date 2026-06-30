@@ -4,7 +4,7 @@ This layer isolates the orchestrator from concrete simulation/physics tooling.
 V1 provides:
 - NoOpPhysicsAdapter: passthrough adapter for environments without Isaac Sim.
 - CallablePhysicsAdapter: wrapper for externally provided conversion/preprocess
-  callable (e.g., bridge to LoHoBench converter or future BeTTER implementation).
+  callable.
 """
 
 from __future__ import annotations
@@ -69,7 +69,7 @@ class CallablePhysicsAdapter:
 
 
 class IsaacSimPhysicsAdapter:
-    """Full-fidelity Isaac preprocessing adapter (LoHoBench-equivalent steps)."""
+    """Full-fidelity Isaac preprocessing adapter."""
 
     name = "isaac_sim_full"
 

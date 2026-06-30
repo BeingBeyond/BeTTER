@@ -28,12 +28,7 @@ The requirements file also installs the vendored `open_clip_mod` package from `t
 
 This installs the retrieval server against the pip-installable `faiss-cpu==1.8.0` package. For the current open-source setup, this is the recommended path because it avoids conda solver churn in the BeTTER environment.
 
-The retrieval stack also depends on the Lightning packages used by `DuoduoCLIP`. The open-source requirements pin these to the same versions used in the working `lohobench` environment:
-
-- `lightning==2.5.6`
-- `pytorch-lightning==2.5.6`
-
-The retrieval stack also depends on the Lightning packages used by `DuoduoCLIP`. The open-source requirements pin these to the same versions used in the working `lohobench` environment:
+The retrieval stack also depends on the Lightning packages used by `DuoduoCLIP`. The open-source requirements pin these to the versions validated for the BeTTER retrieval environment:
 
 - `lightning==2.5.6`
 - `pytorch-lightning==2.5.6`

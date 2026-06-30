@@ -1,8 +1,7 @@
 """
-轨迹插值工具。
+SE(3) trajectory interpolation helpers.
 
-纯数学模块，无 Isaac Sim / USD 依赖。
-来源：src/lohobench/mimicgen/mimicgen_utils.py 中的 interpolate_transforms。
+This is a pure math module with no Isaac Sim or USD dependency.
 """
 
 import numpy as np
@@ -19,27 +18,28 @@ def interpolate_transforms(
     num_steps: int,
 ) -> List[np.ndarray]:
     """
-    在两个 SE(3) 变换矩阵之间插值。
-    - 位置：线性插值
-    - 旋转：SLERP（球面线性插值）
+    Interpolate between two SE(3) transform matrices.
+
+    Positions are linearly interpolated and rotations are interpolated with
+    spherical linear interpolation.
 
     Args:
-        start_mat: 起始 4x4 变换矩阵
-        end_mat: 终止 4x4 变换矩阵
-        num_steps: 插值步数（含首尾）
+        start_mat: Start 4x4 transform matrix.
+        end_mat: End 4x4 transform matrix.
+        num_steps: Number of interpolation steps, including both endpoints.
 
     Returns:
-        长度为 num_steps 的变换矩阵列表
+        List of ``num_steps`` transform matrices.
     """
     start_pos, start_quat = decompose_transform_matrix(start_mat)
     end_pos, end_quat = decompose_transform_matrix(end_mat)
 
     ratios = np.linspace(0.0, 1.0, num_steps)
 
-    # 位置线性插值
+    # Linear position interpolation.
     interp_positions = np.outer(1 - ratios, start_pos) + np.outer(ratios, end_pos)
 
-    # 旋转 SLERP
+    # Rotational SLERP.
     key_rots = R.from_quat([start_quat, end_quat])
     slerp_obj = Slerp([0.0, 1.0], key_rots)
     interp_rots = slerp_obj(ratios)
@@ -60,8 +60,10 @@ def slerp_poses(
     alpha: float,
 ) -> tuple:
     """
-    在两个位姿之间做 SLERP 插值（alpha=0 返回 pose1，alpha=1 返回 pose2）。
-    输入四元数为 Isaac Sim [w, x, y, z] 格式。
+    Interpolate between two poses with linear position blending and SLERP.
+
+    ``alpha=0`` returns the first pose and ``alpha=1`` returns the second pose.
+    Input quaternions use the Isaac Sim ``[w, x, y, z]`` convention.
 
     Returns:
         (interp_pos, interp_quat_wxyz)

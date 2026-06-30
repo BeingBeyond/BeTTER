@@ -56,7 +56,7 @@ python tools/render/render_episode.py \
 ```
 
 By default only `front_camera` is rendered for quick inspection. The README
-command above passes `--cameras all` to render the fixed LoHoBench-style views:
+command above passes `--cameras all` to render the fixed benchmark views:
 
 ```bash
 python tools/render/render_episode.py \

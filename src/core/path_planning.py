@@ -1,8 +1,7 @@
 """
-安全路径生成。
+Safe path generation helpers.
 
-纯数学模块，无 Isaac Sim / USD 依赖。
-来源：src/lohobench/mimicgen/mimicgen_utils.py 中的 generate_adaptive_safe_path。
+This is a pure math module with no Isaac Sim or USD dependency.
 """
 
 import numpy as np
@@ -22,42 +21,41 @@ def generate_adaptive_safe_path(
     dt: float = 1 / 60.0,
 ) -> List[np.ndarray]:
     """
-    自适应安全路径生成器。
+    Generate an adaptive safe path between two SE(3) transforms.
 
-    逻辑：
-    1. 强制将终点 Z 坐标提升到 min_z 以上，防止直接插入桌面。
-    2. 根据线速度和角速度动态计算所需步数。
-    3. 生成线性插值路径（位置线性 + 旋转 SLERP）。
+    The end point is clamped above ``min_z`` to avoid direct table
+    intersections. The number of interpolation steps is chosen from linear and
+    angular travel distance, with ``min_steps`` as a lower bound.
 
     Args:
-        T_start: 起始 4x4 变换矩阵
-        T_end: 终止 4x4 变换矩阵
-        min_z: 终点最低安全高度（米），默认 0.25m
-        lin_speed: 目标线速度（m/s），用于计算步数
-        ang_speed: 目标角速度（rad/s），用于计算步数
-        min_steps: 最小步数下限
-        dt: 仿真时间步长（秒）
+        T_start: Start 4x4 transform matrix.
+        T_end: End 4x4 transform matrix.
+        min_z: Minimum safe end-point height in meters.
+        lin_speed: Target linear speed in meters per second.
+        ang_speed: Target angular speed in radians per second.
+        min_steps: Lower bound for generated steps.
+        dt: Simulation or control time step in seconds.
 
     Returns:
-        变换矩阵列表，长度由距离和速度动态决定
+        List of transform matrices with length determined by travel distance.
     """
     pos_start = T_start[:3, 3]
     pos_end = T_end[:3, 3].copy()
 
-    # 强制终点高度不低于 min_z
+    # Clamp the end height above the safety floor.
     pos_end[2] = max(pos_end[2], min_z)
 
     T_end_adjusted = T_end.copy()
     T_end_adjusted[:3, 3] = pos_end
 
-    # 线性距离
+    # Linear travel distance.
     dist = np.linalg.norm(pos_end - pos_start)
 
-    # 角距离
+    # Angular travel distance.
     rot_diff = T_end_adjusted[:3, :3] @ T_start[:3, :3].T
     rot_angle = np.linalg.norm(R.from_matrix(rot_diff).as_rotvec())
 
-    # 动态步数
+    # Adaptive step count.
     steps_lin = dist / (lin_speed * dt)
     steps_rot = rot_angle / (ang_speed * dt)
     total_steps = int(max(steps_lin, steps_rot, min_steps))
@@ -72,19 +70,19 @@ def generate_constrained_path(
     min_z: float = 0.05,
 ) -> List[np.ndarray]:
     """
-    带 Z 轴下限约束的标准插值路径。
+    Generate a fixed-step interpolated path with a lower Z bound.
 
-    注意：此函数在 LoHoBench mimicgen_replay.py 中定义但从未被调用，
-    已被 generate_adaptive_safe_path 取代。保留此实现供参考。
+    This helper is retained as a simple fixed-step variant; new code should
+    prefer ``generate_adaptive_safe_path`` when speed consistency matters.
 
     Args:
-        T_start: 起始变换矩阵
-        T_end: 终止变换矩阵
-        steps: 固定步数
-        min_z: 路径上每个点的最低 Z 高度
+        T_start: Start transform matrix.
+        T_end: End transform matrix.
+        steps: Fixed number of interpolation steps.
+        min_z: Minimum Z height for every path point.
 
     Returns:
-        变换矩阵列表
+        List of transform matrices.
     """
     T_list = interpolate_transforms(T_start, T_end, steps)
     result = []

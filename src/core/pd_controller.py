@@ -1,8 +1,7 @@
 """
-PD 速度控制器。
+PD velocity controller utilities.
 
-纯数学模块，无 Isaac Sim / USD 依赖。
-来源：scripts/mimicgen_replay.py 中的 MimicGenPDVelocityAgent。
+This is a pure math module with no Isaac Sim or USD dependency.
 """
 
 import numpy as np
@@ -12,19 +11,19 @@ from typing import Optional
 
 class PDVelocityController:
     """
-    SE(3) PD 速度控制器。
+    SE(3) PD velocity controller.
 
-    给定当前位姿和目标位姿，计算 6D twist（线速度 + 角速度）。
-    带微分项（D 项）用于抑制高频抖动。
+    Given current and target poses, compute a 6D twist containing linear and
+    angular velocity. Derivative terms damp high-frequency jitter.
 
     Args:
-        kp_pos: 位置比例增益
-        kd_pos: 位置微分增益
-        kp_rot: 旋转比例增益
-        kd_rot: 旋转微分增益
-        dt: 控制时间步长（秒）
-        max_lin_vel: 线速度限幅（m/s）
-        max_ang_vel: 角速度限幅（rad/s）
+        kp_pos: Position proportional gain.
+        kd_pos: Position derivative gain.
+        kp_rot: Rotation proportional gain.
+        kd_rot: Rotation derivative gain.
+        dt: Control time step in seconds.
+        max_lin_vel: Linear velocity limit in meters per second.
+        max_ang_vel: Angular velocity limit in radians per second.
     """
 
     def __init__(
@@ -49,7 +48,7 @@ class PDVelocityController:
         self._prev_rot_err: Optional[np.ndarray] = None
 
     def reset(self):
-        """重置微分项历史（每个 episode 开始时调用）。"""
+        """Reset derivative history at the start of an episode."""
         self._prev_pos_err = None
         self._prev_rot_err = None
 
@@ -59,16 +58,16 @@ class PDVelocityController:
         target_tf: np.ndarray,
     ) -> np.ndarray:
         """
-        计算从当前位姿到目标位姿的 6D twist。
+        Compute a 6D twist from the current pose to the target pose.
 
         Args:
-            current_tf: 当前 4x4 变换矩阵
-            target_tf: 目标 4x4 变换矩阵
+            current_tf: Current 4x4 transform matrix.
+            target_tf: Target 4x4 transform matrix.
 
         Returns:
-            6D twist [vx, vy, vz, wx, wy, wz]，已限幅
+            Clipped 6D twist ``[vx, vy, vz, wx, wy, wz]``.
         """
-        # 位置误差
+        # Position error.
         pos_err = target_tf[:3, 3] - current_tf[:3, 3]
         if self._prev_pos_err is None:
             pos_d_err = np.zeros(3)
@@ -76,7 +75,7 @@ class PDVelocityController:
             pos_d_err = (pos_err - self._prev_pos_err) / self.dt
         self._prev_pos_err = pos_err
 
-        # 旋转误差（旋转向量）
+        # Rotation error as a rotation vector.
         rot_diff = target_tf[:3, :3] @ current_tf[:3, :3].T
         rot_err = R.from_matrix(rot_diff).as_rotvec()
         if self._prev_rot_err is None:
@@ -85,7 +84,7 @@ class PDVelocityController:
             rot_d_err = (rot_err - self._prev_rot_err) / self.dt
         self._prev_rot_err = rot_err
 
-        # PD 输出
+        # PD output.
         lin_vel = self.kp_pos * pos_err + self.kd_pos * pos_d_err
         ang_vel = self.kp_rot * rot_err + self.kd_rot * rot_d_err
 
@@ -102,16 +101,17 @@ def apply_twist_to_pose(
     local_rotation: bool = False,
 ) -> np.ndarray:
     """
-    将 6D twist 应用到当前位姿，得到新位姿。
+    Apply a 6D twist to a pose and return the new pose.
 
     Args:
-        current_pos: 当前位置 [x, y, z]
-        current_quat_xyzw: 当前四元数 [x, y, z, w]（SciPy 格式）
+        current_pos: Current position ``[x, y, z]``.
+        current_quat_xyzw: Current quaternion in SciPy ``[x, y, z, w]`` order.
         twist: 6D twist [dx, dy, dz, drx, dry, drz]
-        local_rotation: True 表示 twist 在末端坐标系下，False 表示在世界坐标系下
+        local_rotation: If true, interpret the twist in the end-effector frame;
+            otherwise interpret it in the world frame.
 
     Returns:
-        新位姿 [x, y, z, qx, qy, qz, qw]（7D，xyzw 格式）
+        New 7D pose ``[x, y, z, qx, qy, qz, qw]`` in xyzw quaternion order.
     """
     delta_pos = twist[:3].copy()
 

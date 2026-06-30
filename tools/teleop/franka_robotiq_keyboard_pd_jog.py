@@ -205,7 +205,7 @@ def parse_args() -> argparse.Namespace:
         "--physics-dt",
         type=float,
         default=1.0 / 120.0,
-        help="Physics dt. Default keeps the BeTTER/LoHoBench 120Hz physics rate.",
+        help="Physics dt. Default keeps the BeTTER 120Hz physics rate.",
     )
     parser.add_argument(
         "--control-dt",
@@ -217,7 +217,7 @@ def parse_args() -> argparse.Namespace:
         "--sensitivity",
         type=float,
         default=1.0,
-        help="Multiplies the old LoHoBench keyboard sensitivity.",
+        help="Multiplies the default keyboard sensitivity.",
     )
     parser.add_argument(
         "--pos-sensitivity",
